@@ -15,7 +15,7 @@ defined('ABSPATH') || exit;
         <div class="pizza-layers-selected__footermobile">
             <div class="ev_pizza_total">
                 <span class="layers-total"><?php esc_html_e('Total:', 'pizza-builder-for-woocommerce'); ?></span>
-                <span class="layers-total-price"><?php echo $product->get_price_html(); ?></span>
+                <span class="layers-total-price"><?php echo wp_kses_post($product->get_price_html()); ?></span>
             </div>
             <button class="ev-pizza-button choose-side-button"><?php echo apply_filters('ev_pizza_add_side_button', esc_html__('Choose', 'pizza-builder-for-woocommerce')); ?></button>
         </div>
@@ -58,7 +58,7 @@ defined('ABSPATH') || exit;
             <div class="pizza-layers-selected__footer">
                 <div class="ev_pizza_total">
                     <span class="layers-total"><?php esc_html_e('Total:', 'pizza-builder-for-woocommerce'); ?></span>
-                    <span class="layers-total-price"><?php echo $product->get_price_html(); ?></span>
+                    <span class="layers-total-price"><?php echo wp_kses_post($product->get_price_html()); ?></span>
                 </div>
                 <button class="ev-pizza-button choose-side-button"><?php echo apply_filters('ev_pizza_add_side_button', esc_html__('Choose', 'pizza-builder-for-woocommerce')); ?></button>
             </div>

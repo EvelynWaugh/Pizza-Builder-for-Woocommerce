@@ -172,7 +172,7 @@ $product_price = $product_pizza->get_price();
                                     </div>
                                     <p><?php echo esc_html($component['name']); ?></p>
                                     <?php if (!empty($component['weight'])) : ?>
-                                        <p><?php echo $component['weight'] . '/' . wc_price($component['price']) ?></p>
+                                        <p><?php echo esc_html($component['weight']) . '/' . wc_price($component['price']) ?></p>
                                     <?php else : ?>
                                         <p><?php echo wc_price($component['price']); ?></p>
                                     <?php endif; ?>

@@ -14,7 +14,7 @@ defined('ABSPATH') || exit;
         <div class="pizza-layers-selected__footermobile">
             <div class="ev_pizza_total">
                 <span class="layers-total"><?php esc_html_e('Total:', 'pizza-builder-for-woocommerce'); ?></span>
-                <span class="layers-total-price"><?php echo $product->get_price_html(); ?></span>
+                <span class="layers-total-price"><?php echo wp_kses_post($product->get_price_html()); ?></span>
             </div>
             <button class="ev-pizza-button choose-layer-button"><?php echo apply_filters('ev_pizza_add_layer_button', esc_html(__('Choose', 'pizza-builder-for-woocommerce'))); ?></button>
         </div>
@@ -27,12 +27,12 @@ defined('ABSPATH') || exit;
                 $inner_product = wc_get_product($c['id']);
 
                 ?>
-                <div class="pizza-layer-item" data-layer="<?php echo $c['id'] ?>" data-layer-price="<?php echo Ev_Pizza_Product::get_product($inner_product)->get_price(); ?>">
+                <div class="pizza-layer-item" data-layer="<?php echo esc_attr($c['id']); ?>" data-layer-price="<?php echo esc_attr(Ev_Pizza_Product::get_product($inner_product)->get_price()); ?>">
 
                     <?php echo $inner_product->get_image(); ?>
 
-                    <span class="ev-pizza-title"><?php echo $inner_product->get_name(); ?></span>
-                    <span class="ev-pizza-price"><?php echo $inner_product->get_price_html(); ?> </span>
+                    <span class="ev-pizza-title"><?php echo wp_kses_post($inner_product->get_name()); ?></span>
+                    <span class="ev-pizza-price"><?php echo wp_kses_post($inner_product->get_price_html()); ?> </span>
                 </div>
             <?php endforeach; ?>
         </div>
@@ -43,10 +43,10 @@ defined('ABSPATH') || exit;
             <div class="pizza-layers-selected__block">
                 <div class="pizza-layers-selected__item" data-product-id="<?php echo esc_attr($product->get_id()); ?>">
                     <div class="pizza-layers-left">
-                        <?php echo $product->get_image(); ?>
+                        <?php echo wp_kses_post($product->get_image()); ?>
                     </div>
                     <div class="pizza-layers-right">
-                        <span><?php echo $product->get_name(); ?></span>
+                        <span><?php echo wp_kses_post($product->get_name()); ?></span>
                         <span class="pizza-variable-price"><?php echo $product->get_price_html(); ?> </span>
                     </div>
                 </div>
@@ -72,7 +72,7 @@ defined('ABSPATH') || exit;
             <div class="pizza-layers-selected__footer">
                 <div class="ev_pizza_total">
                     <span class="layers-total"><?php esc_html_e('Total:', 'pizza-builder-for-woocommerce'); ?></span>
-                    <span class="layers-total-price"><?php echo $product->get_price_html(); ?></span>
+                    <span class="layers-total-price"><?php echo wp_kses_post($product->get_price_html()); ?></span>
                 </div>
                 <button class="ev-pizza-button choose-layer-button"><?php echo apply_filters('ev_pizza_add_layer_button', esc_html__('Choose', 'pizza-builder-for-woocommerce')); ?></button>
             </div>

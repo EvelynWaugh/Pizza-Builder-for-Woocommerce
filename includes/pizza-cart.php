@@ -21,7 +21,7 @@ class Ev_Pizza_Cart
 
             if (isset($_POST['evc_quantity']) && !empty($_POST['evc_quantity'])) {
 
-                foreach ($_POST['evc_quantity'] as $component_id => $quantity) {
+                foreach (wc_clean($_POST['evc_quantity']) as $component_id => $quantity) {
                     if ($quantity == 0) {
                         continue;
                     }
@@ -43,7 +43,7 @@ class Ev_Pizza_Cart
 
             if (isset($_POST['ev_quantity']) && !empty($_POST['ev_quantity'])) {
 
-                foreach ($_POST['ev_quantity'] as $component_id => $quantity) {
+                foreach (wc_clean($_POST['ev_quantity']) as $component_id => $quantity) {
                     if ($quantity == 0) {
                         continue;
                     }
@@ -63,7 +63,7 @@ class Ev_Pizza_Cart
                 }
             }
             if (isset($_POST['ev-pizza-consists'])) {
-                $pizza_consists = json_decode(wp_unslash($_POST['ev-pizza-consists']), true);
+                $pizza_consists = json_decode(wp_unslash(sanitize_text_field($_POST['ev-pizza-consists'])), true);
 
                 if (!empty($pizza_consists)) {
 
@@ -86,7 +86,7 @@ class Ev_Pizza_Cart
                 }
             }
             if (isset($_POST['pizza-layer-data'])) {
-                $pizza_layers = json_decode(wp_unslash($_POST['pizza-layer-data']), true);
+                $pizza_layers = json_decode(wp_unslash(sanitize_text_field($_POST['pizza-layer-data'])), true);
                 if (!empty($pizza_layers)) {
 
                     foreach ($pizza_layers as $product) {
@@ -104,7 +104,7 @@ class Ev_Pizza_Cart
                 }
             }
             if (isset($_POST['pizza-sides-data'])) {
-                $pizza_sides = json_decode(wp_unslash($_POST['pizza-sides-data']), true);
+                $pizza_sides = json_decode(wp_unslash(sanitize_text_field($_POST['pizza-sides-data'])), true);
                 if (!empty($pizza_sides)) {
                     foreach ($pizza_sides as $pizza_side) {
                         foreach ($food_components_data['bortik']['components'] as $component) {
