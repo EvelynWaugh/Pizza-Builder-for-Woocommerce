@@ -118,12 +118,9 @@ class Ev_Pizza_Checkout
                     ];
                 }
             }
-            ob_start();
+
             wc_get_template('cart/ev-pizza-meta.php', ['product' => $product, 'item_data' => $item_data, 'key' => $item_id], '', EV_PIZZA_PATH . 'templates/');
-            $fancy = ob_get_clean();
-            $html .=  $fancy;
         }
-        echo $html;
     }
     /**
      * Display order meta in classic way fancybox in thankyou page & admin
@@ -189,9 +186,9 @@ class Ev_Pizza_Checkout
 
         if ($args['echo']) {
 
-            echo $html;
+            echo wp_kses_post($html);
         } else {
-            return $html;
+            return wp_kses_post($html);
         }
     }
     /**
@@ -249,12 +246,9 @@ class Ev_Pizza_Checkout
                         ];
                     }
                 }
-                ob_start();
+
                 wc_get_template('cart/ev-pizza-meta.php', ['product' =>  $product, 'item_data' => $item_data, 'key' => $cart_item['key']], '', EV_PIZZA_PATH . 'templates/');
-                $fancy = ob_get_clean();
-                $html .=  $fancy;
             }
         }
-        return $html;
     }
 }

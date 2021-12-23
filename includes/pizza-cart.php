@@ -146,7 +146,7 @@ class Ev_Pizza_Cart
                 foreach ($cart_item['ev_pizza_config']['extra']['components'] as $component) {
                     $item_data[] = [
                         'key' => $component['name'],
-                        'value' => $component['weight'] !== '' ? $component['name'] . '<span>' . $component['weight'] . '/' . '</span>' . wc_price($component['price']) . ' x' . $component['quantity'] : wc_price($component['price']) . ' x' . $component['quantity']
+                        'value' => $component['weight'] !== '' ? '<span>' . $component['weight'] . '/' . '</span>' . wc_price($component['price']) . ' x' . $component['quantity'] : wc_price($component['price']) . ' x' . $component['quantity']
                     ];
                 }
             }
@@ -211,6 +211,7 @@ class Ev_Pizza_Cart
                     }
                 }
                 // var_dump($product);
+
                 wc_get_template('cart/ev-pizza-meta.php', ['product' => $product, 'item_data' => $item_data, 'key' => $cart_item_key], '', EV_PIZZA_PATH . 'templates/');
             }
         }
