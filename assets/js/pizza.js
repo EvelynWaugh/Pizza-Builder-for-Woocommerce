@@ -183,6 +183,7 @@
         this.form.on("wc_variation_form", this.initSwatches.bind(this));
         this.form.on("found_variation", this.foundVariation.bind(this));
         this.form.on("show_variation", this.showVariation.bind(this));
+        this.form.on("woocommerce_variation_has_changed", this.onChangeVariation.bind(this));
         this.form.on("click", ".reset_variations", this.resetVariation.bind(this));
       }
 
@@ -981,7 +982,6 @@
       const attributeName = smoothGroup.data("attribute_name");
       const selectEl = this.form.find(`select[data-attribute_name="${attributeName}"]`);
       if (selectEl.length) {
-       
         smoothGroup.addClass("smooth-selected");
 
         smoothGroup.find(".ev-smooth-item").attr("aria-checked", "false");
@@ -1003,16 +1003,25 @@
      * @returns {void}
      */
     foundVariation(e, variation) {
-      
-    }
+		
+	}
 
     /**
      * @param {jQuery.Event} e
      * @returns {void}
      */
     showVariation(e, variation) {
+      //console.log(variation, this.form);
       this.onVariationChange(this.form);
     }
+
+	/**
+	 * @param {jQuery.Event} e
+	 */
+	onChangeVariation(e) {
+		this.onVariationChange(this.form);
+	}
+
     /**
      *
      * @param {MouseEvent} e
@@ -1025,6 +1034,7 @@
 
         const smoothRadios = this.form.find(".pizza-smooth-radio");
         smoothRadios.removeClass("smooth-selected");
+		$('.ev-smooth-item', smoothRadios).removeClass('disabled selected');
       }
     }
 
@@ -1071,6 +1081,9 @@
     }
 
     onVariationChange(form) {
+      if (!this.wcVariationFormInstance) {
+        return;
+      }
       const attributes = this.wcVariationFormInstance.getChosenAttributes();
       const currentAttributes = attributes.data;
       const smoothGroups = $(form).find(".pizza-smooth-radio");

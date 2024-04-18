@@ -15,7 +15,7 @@ A WordPress plugin for creating restaurant/pizza components.
   
 Pizza builder for [WooCommerce](https://wordpress.org/plugins/woocommerce/) - creative plugin for building not only restaurant/pizza store but any store with custom components . It allows create components like ingredients, which normally not required to be a woocommerce product. These components can be included in product price or you can add every component price to product price and build product price based on components.
 
-[Plugin home page](https://pizza.evelynwaugh.com.ua/) | [Docs](https://pizza.evelynwaugh.com.ua/first-steps/) | [Demo #1](https://pizza.evelynwaugh.com.ua/product/burger/) | [Demo #2](https://pizza.evelynwaugh.com.ua/product/pepperoni-pizza/)
+[Plugin home page](https://pizza.evelynwaugh.com.ua/) | [Docs](https://pizza.evelynwaugh.com.ua/first-steps/) | [Demo #1](https://pizza.evelynwaugh.com.ua/product/burger/) | [Demo #2](https://pizza.evelynwaugh.com.ua/product/pepperoni-pizza/) | [Demo #3](https://pizza.evelynwaugh.com.ua/product/dodo-style-pizza/)
 
 https://www.youtube.com/watch?v=2vdk1YnXEt0
 

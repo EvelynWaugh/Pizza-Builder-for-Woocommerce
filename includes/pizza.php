@@ -376,11 +376,14 @@ class Ev_Pizza {
 
 	public function enqueue_order_scripts() {
 		global $current_screen;
-		if ( $current_screen->id === 'shop_order' ) {
-			wp_enqueue_style( 'pizza-fancybox', plugins_url( 'assets/js/fancyBox/jquery.fancybox.min.css', EV_PIZZA_DIR ) );
+
+		if ( $current_screen->id === 'shop_order' || $current_screen->id === 'woocommerce_page_wc-orders' ) {
+			wp_enqueue_style( 'pizza-fancybox', plugins_url( 'assets/js/fancyBox/fancybox.min.css', EV_PIZZA_DIR, array(), '4.0.7' ) );
 			wp_enqueue_style( 'pizza-admin', plugins_url( 'assets/css/admin.css', EV_PIZZA_DIR ), array(), EV_PIZZA_VERSION, 'all' );
-			wp_enqueue_script( 'pizza-fancybox', plugins_url( 'assets/js/fancyBox/jquery.fancybox.min.js', EV_PIZZA_DIR ), array( 'jquery' ), '3.5.7', true );
-			wp_enqueue_script( 'pizza-front', plugins_url( 'assets/js/pizza.js', EV_PIZZA_DIR ), array( 'jquery', 'wp-util' ), EV_PIZZA_VERSION, true );
+			wp_enqueue_script( 'pizza-fancybox', plugins_url( 'assets/js/fancyBox/fancybox.min.js', EV_PIZZA_DIR ), array( 'jquery' ), '4.0.7', true );
+			wp_enqueue_script( 'pizza-hooks', plugins_url( 'assets/js/pizza-hooks.js', EV_PIZZA_DIR ), array( 'jquery', 'wp-util', 'wp-hooks' ), EV_PIZZA_VERSION, true );
+
+			wp_enqueue_script( 'pizza-main', plugins_url( 'assets/js/main.js', EV_PIZZA_DIR ), array( 'jquery', 'wp-util', 'pizza-hooks' ), EV_PIZZA_VERSION, true );
 		}
 	}
 

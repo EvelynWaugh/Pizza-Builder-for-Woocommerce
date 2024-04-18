@@ -65,6 +65,7 @@
 		Fancybox.show([{ src: `#ev-pizza-${$(this).attr("data-product-id")}`, type: "inline" }] );
 			
 	  });
+	  
 	  $(document.body).on("click", ".ev-remove-component", function (e) {
 		e.preventDefault();
 	  });
