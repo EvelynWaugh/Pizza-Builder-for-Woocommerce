@@ -146,9 +146,9 @@
       this.init();
 
       //events
-      $(".component-buttons", this.pizzaContainer).on("click", ".plus, .minus", this.handleQuantity.bind(this));
+      $(".component-buttons", this.pizzaContainer).on("click", ".qty_button_plus, .qty_button_minus", this.handleQuantity.bind(this));
       //ripple
-      $(".component-buttons", this.pizzaContainer).on("mousedown", ".plus, .minus", this.rippleButtons);
+      $(".component-buttons", this.pizzaContainer).on("mousedown", ".qty_button_plus, .qty_button_minus", this.rippleButtons);
 
       //base components
       $("[data-id=remove-component] .pizza-components-item", this.pizzaContainer).on("click", this.calculateComponentsRemove.bind(this));
@@ -278,7 +278,7 @@
 
       const currentElement = $(e.currentTarget);
 
-      const $qty = $(e.currentTarget).closest(".quantity").find(".component-qty"),
+      const $qty = $(e.currentTarget).closest(".pizza-quantity").find(".component-qty"),
         max = parseFloat($qty.attr("max")),
         min = parseFloat($qty.attr("min")),
         step = $qty.attr("step");
@@ -292,7 +292,7 @@
       if (step === "any" || step === "" || step === undefined || parseFloat(step) === "NaN") step = 1;
 
       // Change the value
-      if (currentElement.is(".plus")) {
+      if (currentElement.is(".qty_button_plus")) {
         if (max && currentVal >= max) {
           $qty.val(max);
         } else {
@@ -300,7 +300,7 @@
         }
         if (currentVal + parseFloat(step) >= 1) {
           $qty.addClass("is-active");
-          currentElement.siblings(".minus").css("display", "block");
+          currentElement.siblings(".qty_button_minus").css("display", "block");
         }
       } else {
         if (min && currentVal <= min) {
@@ -1154,7 +1154,7 @@
         return;
       }
 
-      if ($self.closest(".plus, .minus")) {
+      if ($self.closest(".qty_button_plus, .qty_button_minus")) {
         e.stopPropagation();
       }
       var initPos = $self.css("position"),
