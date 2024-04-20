@@ -431,7 +431,7 @@ class Ev_Pizza {
 			.MuiFormControl-root .MuiSwitch-input {
 				height: 100%;
 			}
-
+		
 			#ev_pizza_product_data label {
 				float: none;
 				width: auto;

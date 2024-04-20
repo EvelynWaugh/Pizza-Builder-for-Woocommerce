@@ -11,7 +11,7 @@
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: pizza-builder-for-woocommerce
  * WC requires at least: 5.0.0
- * WC tested up to:      8.7.0
+ * WC tested up to:      8.8.2
  */
 
 defined( 'ABSPATH' ) || exit;

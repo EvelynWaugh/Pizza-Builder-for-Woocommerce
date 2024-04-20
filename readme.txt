@@ -13,13 +13,13 @@ A WordPress plugin for creating restaurant/pizza components.
   
 == Description ==
   
-Pizza builder for [WooCommerce](https://wordpress.org/plugins/woocommerce/) - creative plugin for building not only restaurant/pizza store but any store with custom components . It allows create components like ingredients, which normally not required to be a woocommerce product. These components can be included in product price or you can add every component price to product price and build product price based on components.
+Pizza builder for [WooCommerce](https://wordpress.org/plugins/woocommerce/) - creative plugin for building not only restaurant/pizza store but any store with custom components . It allows create components like ingredients, which normally not required to be a woocommerce product. You have the flexibility to include component costs in the product price or individually add them to customize the final product price based on selected components.
 
 [Plugin home page](https://pizza.evelynwaugh.com.ua/) | [Docs](https://pizza.evelynwaugh.com.ua/first-steps/) | [Demo #1](https://pizza.evelynwaugh.com.ua/product/burger/) | [Demo #2](https://pizza.evelynwaugh.com.ua/product/pepperoni-pizza/) | [Demo #3](https://pizza.evelynwaugh.com.ua/product/dodo-style-pizza/)
 
 https://www.youtube.com/watch?v=2vdk1YnXEt0
 
-Pizza builder for WooCommerce should be user-friendly. Also there is a page for developers, where displayed not so difficult hooks mostly for displaying text. I prefer this way to be done, in order to have translation option.
+Pizza builder for WooCommerce is user-friendly and developer-friendly. Also, there is a page for developers where not-so-complicated hooks are displayed, primarily for text display.
 
 = What it can =
 * **Create components for WooCommerce product** - supports only simple and variable products. Commonly created for pizza, but could be any food/meal product, or any other product.
@@ -48,11 +48,11 @@ Activate Pizza builder for WooCommerce by going to Plugins and pressing Activate
 Go to WooCommerce->Settings, Select Pizza tab
 On Pizza Tab select Components tab
 Create Group and components for it
-Then you will be able to choose components in product page
+Then you will be able to choose components on WooCommerce product page
 
 Go to Products->Add New
 Select Pizza checkbox, click on Pizza data tab
-Choose Extra components block or Consists of block.
+Choose Style.
 Publish product
 == Frequently Asked Questions ==
   
@@ -101,3 +101,4 @@ Simply deactivate and delete the plugin.
 * Move to Swiper.js
 * New Style (Dodo pizza)
 * Smooth Attribute Swatches
+* Compatible with qty buttons
