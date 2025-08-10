@@ -1,0 +1,1 @@
+{"version":3,"file":"adminProductPizza.css","mappings":";;;AAAA;EACC;EACA;AACD,C","sources":["webpack://pizza/./src/sass/admin/pizza.scss"],"sourcesContent":[".wcpizza-rules-panel .components-panel__header {\r\n\theight: auto;\r\n\tpadding: 5px 0 5px 10px;\r\n}"],"names":[],"sourceRoot":""}

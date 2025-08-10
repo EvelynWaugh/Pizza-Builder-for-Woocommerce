@@ -4,7 +4,7 @@
   "description": "Pizza plugin",
   "author": "wsjr_catarri",
   "devDependencies": {
-    "@wordpress/scripts": "^27.2.0"
+    "@wordpress/scripts": "^30.11.0"
   },
   "dependencies": {
     "@emotion/react": "^11.11.3",

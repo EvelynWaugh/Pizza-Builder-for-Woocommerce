@@ -30,7 +30,7 @@
   font-weight: 400;
   display: flex;
   align-items: center;
-  margin-left: 5px;
+  margin-right: 5px;
   color: #222222;
 }
 .pizza-dodo-style .pizza-base-item {
@@ -74,7 +74,7 @@
   height: 8px;
 }
 .pizza-dodo-style .pizza-base-item:not(:first-of-type) {
-  margin-left: 5px;
+  margin-right: 5px;
 }
 .pizza-dodo-style .pizza-base-item.removed .pizza-component-name {
   text-decoration: none;
@@ -84,7 +84,7 @@
   content: "";
   width: 100%;
   position: absolute;
-  right: 0;
+  left: 0;
   top: 50%;
   border-bottom: 1px solid #222222;
 }
@@ -117,7 +117,7 @@
   width: 50px;
   height: 50px;
   top: 0;
-  left: 0;
+  right: 0;
   position: absolute;
   text-align: center;
   z-index: -1;
@@ -128,24 +128,24 @@
   content: "";
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   height: 50px;
   width: 50px;
   background: #fff;
 }
 
 .food-badge:before {
-  transform: rotate(30deg);
+  transform: rotate(-30deg);
 }
 
 .food-badge:after {
-  transform: rotate(60deg);
+  transform: rotate(-60deg);
 }
 
 .component-buttons {
   position: absolute;
   top: 0;
-  right: -15px;
+  left: -15px;
 }
 
 .pizza-components-nav {
@@ -185,13 +185,13 @@
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 15px;
   flex: 0 0 63%;
-  padding-right: 25px;
-  border-right: 2px solid #EAEAEA;
+  padding-left: 25px;
+  border-left: 2px solid #EAEAEA;
 }
 
 .pizza-layers-selected, .pizza-floors-selected {
   flex: 0 0 33%;
-  padding-left: 27px;
+  padding-right: 27px;
 }
 
 .ev-pizza-button {
@@ -229,7 +229,7 @@
   font-weight: bold;
   font-size: 30px;
   display: block;
-  margin-left: 10px;
+  margin-right: 10px;
   flex: 1;
 }
 
@@ -273,7 +273,7 @@
   margin-top: 20px;
 }
 .pizza-components-buttons > button:first-of-type {
-  margin-right: 15px;
+  margin-left: 15px;
 }
 
 .woocommerce div.product p.price, .woocommerce div.product span.price {
@@ -293,7 +293,7 @@
   text-decoration: none;
   border-radius: 50%;
   position: absolute;
-  right: -15px;
+  left: -15px;
   top: 0;
   transition: all 0.2s ease;
 }
@@ -341,7 +341,7 @@
   padding: 2px 20px;
   font-size: 12px;
   cursor: pointer;
-  margin-right: 8px;
+  margin-left: 8px;
   margin-bottom: 8px;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -356,7 +356,7 @@
 .pizza-quantity-badge {
   position: absolute;
   top: 0;
-  right: -5px;
+  left: -5px;
   border-radius: 50%;
   background-color: hotpink;
   color: #fff;
@@ -394,7 +394,7 @@
 
 .pizza-tippy {
   position: absolute;
-  left: 5px;
+  right: 5px;
   top: 5px;
   cursor: pointer;
 }
@@ -406,9 +406,9 @@
 .ripple {
   position: absolute;
   top: 0;
-  left: 0;
-  bottom: 0;
   right: 0;
+  bottom: 0;
+  left: 0;
   overflow: hidden;
   transform: translateZ(0);
   border-radius: inherit;
@@ -455,12 +455,12 @@
     flex: 1;
     display: block;
     width: 100%;
-    padding-right: 0;
+    padding-left: 0;
     border: none;
     margin-top: 15px;
   }
   .pizza-layers-selected, .pizza-floors-selected {
-    padding-left: 0;
+    padding-right: 0;
     flex: 1;
   }
   .pizza-fancybox-layers, .pizza-fancybox-sides, .pizza-fancybox-floors {
@@ -515,10 +515,10 @@
 }
 .woocommerce form.cart .pizza_components_wrapper .component-buttons .pizza-quantity {
   display: flex;
-  margin-right: 0;
+  margin-left: 0;
   border-radius: 50px;
   float: unset;
-  margin-right: 0 !important;
+  margin-left: 0 !important;
   background: rgba(255, 255, 255, 0.9);
   border: 1px solid #EBEBEB;
 }
@@ -643,7 +643,7 @@ body.woocommerce .pizza_components_wrapper .pizza-components-block .pizza-compon
     text-align: center;
   }
   .pizza-components-item:not(:last-of-type) {
-    margin-right: 10px;
+    margin-left: 10px;
   }
   .slick-slider .pizza-components-item {
     display: flex;
@@ -695,10 +695,10 @@ body.woocommerce .pizza_components_wrapper .pizza-components-block .pizza-compon
   border-color: #868686;
 }
 .pizza-component-tabs-wrapper .pizza-tab-nav li:first-of-type a {
-  border-radius: 6px 0 0 6px;
+  border-radius: 0 6px 6px 0;
 }
 .pizza-component-tabs-wrapper .pizza-tab-nav li:last-of-type a {
-  border-radius: 0 6px 6px 0;
+  border-radius: 6px 0 0 6px;
 }
 .pizza-component-tabs-wrapper .tab-components-wrapper {
   margin-top: 30px;
@@ -751,7 +751,7 @@ body.woocommerce .pizza_components_wrapper .pizza-components-block .pizza-compon
   align-items: center;
   width: 100%;
   max-width: 72px;
-  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .pizza-quick-view .pizza-components-wrapper .components-item-wrapper {
@@ -802,14 +802,14 @@ body.woocommerce .pizza_components_wrapper .pizza-components-block .pizza-compon
   display: flex;
   align-items: center;
   background: #FFFFFF;
-  box-shadow: 2px 2px 10px rgba(193, 193, 193, 0.4);
+  box-shadow: -2px 2px 10px rgba(193, 193, 193, 0.4);
   padding: 15px;
   -moz-column-gap: 6px;
        column-gap: 6px;
 }
 .pizza-layers-selected__item .ev-remove-layer, .pizza-layers-selected__item .ev-remove-side, .pizza-layers-selected__item .u-remove-floor, .pizza-layers-selected__item .u-remove-side, .pizza-floors-selected__item .ev-remove-layer, .pizza-floors-selected__item .ev-remove-side, .pizza-floors-selected__item .u-remove-floor, .pizza-floors-selected__item .u-remove-side {
   position: absolute;
-  right: 10px;
+  left: 10px;
   top: 10px;
   cursor: pointer;
 }
@@ -884,7 +884,7 @@ body.woocommerce .pizza_components_wrapper .pizza-components-block .pizza-compon
 }
 
 .wc-item-meta .wc-item-food ~ p {
-  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .widget_shopping_cart ul li .variation {
@@ -901,9 +901,9 @@ body.woocommerce .pizza_components_wrapper .pizza-components-block .pizza-compon
 }
 
 .wc-item-meta .wc-item-meta-label, .wc-item-meta dt, dl.variation .wc-item-meta-label, dl.variation dt {
-  float: left;
+  float: right;
   clear: both;
-  margin-right: 0.25rem;
+  margin-left: 0.25rem;
   margin-top: 0;
   list-style: none outside;
 }
@@ -927,7 +927,7 @@ body .shop_table.cart .product-name .product-title {
 }
 
 .shop_table .product-name .product-name-space {
-  margin-right: 0;
+  margin-left: 0;
 }
 
 .shop_table .product-name dl.variation {
@@ -975,7 +975,7 @@ body .shop_table.cart .product-name .product-title {
 .pizza-smooth-radio .ev-smooth-overlay {
   position: absolute;
   top: 0px;
-  left: 0px;
+  right: 0px;
   bottom: 0px;
 }
 .pizza-smooth-radio.smooth-col-2 .ev-smooth-overlay {
@@ -1024,7 +1024,5 @@ body .shop_table.cart .product-name .product-title {
   position: relative;
 }
 .woocommerce .pizza-meta-list p .pizza-quantity-badge {
-  right: -100%;
+  left: -100%;
 }
-
-/*# sourceMappingURL=ev-pizza.css.map*/
